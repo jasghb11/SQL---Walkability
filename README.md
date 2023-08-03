@@ -26,57 +26,15 @@ According to this equation, there is a strong positive correlation between the p
 
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/af449647-c5a0-4c36-85e5-ac8a0241f3d5)
 
+![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/34a524a8-56bb-4e39-9946-4845947803f6)
+![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/24cb07ed-036f-4dc2-b96e-ea87163dddfd)
 
+![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/13855b7c-f8de-4b7f-81b7-dc5fede66140)
 
-SELECT *
-FROM WalkCor;
+![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/4c3e178f-6023-43b8-99fa-82d215fe6c96)
 
--- Mean and Standard Deviation for Percentages of Zero Cars
-SELECT AVG(PercentageZeroCar) AS average_PercentageZeroCar, AVG(PercentageTwoCar) AS average_PercentageTwoCar,
-		AVG(HiWgWk) AS average_HiWgWk, AVG(NatWalkInd) AS average_NatWalkInd
-FROM 
-	WalkCor;
+![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/e91e7063-65e7-446a-b498-519f03731f0f)
 
-GO
+![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/52e82f22-2be1-451d-a833-39498f84cdd9)
 
-SELECT STDEV(PercentageZeroCar) AS StdDev_PercentageZeroCar, STDEV(PercentageTwoCar) AS StdDev_PercentageTwoCar,
-		STDEV(HiWgWk) AS StdDev_HiWgWk, STDEV(NatWalkInd) AS StdDev_NatWalkInd
-FROM WalkCor;
-
--- Data for Percentage of Households with Zero Cars
-DECLARE @Mean_PercentageZeroCar FLOAT = 0.328226;
-DECLARE @StdDev_PercentageZeroCar FLOAT = 0.1519;
-
--- Data for Percentage of Households with 2+ Cars
-DECLARE @Mean_PercentageTwoCar FLOAT = 0.569938;
-DECLARE @StdDev_PercentageTwoCar FLOAT = 0.2197;
-
--- Data for # of High Wage Workers in the Area
-DECLARE @Mean_HiWgWk FLOAT = 9.5416;
-DECLARE @StdDev_HiWgWk FLOAT = 235.3702;
-
--- Data for National Walkability Index
-DECLARE @Mean_NatWalkInd FLOAT = 9.5416;
-DECLARE @StdDev_NatWalkInd FLOAT = 4.3739
-
--- Pearson Correlation Coefficient for Percentage of Zero Cars and Walkability
-DECLARE @Zero_Walkability_Pearson FLOAT;
-SELECT @Zero_Walkability_Pearson = SUM((PercentageZeroCar - @Mean_PercentageZeroCar) * (NatWalkInd - @Mean_NatWalkInd)) / 
-(COUNT(*) * @StdDev_PercentageZeroCar * @StdDev_NatWalkInd)
-FROM WalkCor;
-
--- Pearson Correlation Coefficient for Percentage of 2+ Cars and Walkability
-DECLARE @Two_Walkability_Pearson FLOAT;
-SELECT @Two_Walkability_Pearson = SUM((PercentageTwoCar - @Mean_PercentageTwoCar) * (NatWalkInd - @Mean_NatWalkInd)) /
-(COUNT(*) * @StdDev_PercentageTwoCar * @StdDev_NatWalkInd)
-FROM WalkCor;
-
--- Pearson Correlation Coefficient for High Wage Workers and Walkability
-DECLARE @HiWgWk_Pearson FLOAT;
-SELECT @HiWgWk_Pearson = SUM((HiWgWk - @Mean_HiWgWk) * (NatWalkInd - @Mean_NatWalkInd)) /
-(Count(*) * @StdDev_HiWgWk * @StdDev_HiWgWk)
-FROM WalkCor;
-
-SELECT @Zero_Walkability_Pearson AS ZeroCarsWalkability_Pearson_Coefficient;
-SELECT @Two_Walkability_Pearson AS TwoCarWalkability_Pearson_Coefficient;
-SELECT @HiWgWk_Pearson AS HiWgWk_Pearson_Coefficient;
+![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/b761bcaf-1dcd-472b-ae28-727e700b2fc9)

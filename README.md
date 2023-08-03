@@ -24,6 +24,10 @@ As a result of my query, I found the Pearson Coefficient for the percentage of z
 The Pearson Coefficient ranges from -1 to +1, where +1 indicates a perfect positive linear relationship, -1 represents a perfect negative linear relationship, and 0 indicates no linear relationship. 
 According to this equation, there is a strong positive correlation between the percentage of zero-car households and walkability, a strong negative correlation between the percentage of two car or more households, and no correlation between high-income workers and walkability. 
 
+![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/af449647-c5a0-4c36-85e5-ac8a0241f3d5)
+
+
+
 SELECT *
 FROM WalkCor;
 

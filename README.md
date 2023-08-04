@@ -29,16 +29,12 @@ This query calls the name of the Census area and the values for the columns repr
 
 This query calls the average values for each of the listed columns. 
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/af449647-c5a0-4c36-85e5-ac8a0241f3d5)
-
-This query is used to derive the standard deviation for each of the columns. 
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/34a524a8-56bb-4e39-9946-4845947803f6)
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/24cb07ed-036f-4dc2-b96e-ea87163dddfd)
-
-This query is used to declare the values for the averages and standard deviations for the listed columns. 
+This query is used to derive the standard deviation for each of the columns. 
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/13855b7c-f8de-4b7f-81b7-dc5fede66140)
-
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/4c3e178f-6023-43b8-99fa-82d215fe6c96)
-
+This query is used to declare the values for the averages and standard deviations for the listed columns.
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/e91e7063-65e7-446a-b498-519f03731f0f)
 
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/52e82f22-2be1-451d-a833-39498f84cdd9)

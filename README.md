@@ -16,19 +16,25 @@ The walkability index is a metric the EPA determines through a weighted formula 
 
 My Approach
 First, I imported the data set into Microsoft SQL Server Management Tool to better view and manipulate the data set. I then isolated the columns representing values for the name of the Census region, the percentage of households with zero cars, the percentage of households with two or more cars, the total number of high-wage workers that lived in the Census region, and the national walkability index. 
-Using the AVG and STDEV functions, I calculated the average value and standard deviation for each listed columns with numerical values. With these two values for each of the columns, I calculated the Pearson Coefficient for the percentage of zero-car households, percentage of two or more cars households, and the total number of high-wage workers concerning the national walkability index for each of the Census regions. 
+Using the AVG and STDEV functions, I calculated the average value and standard deviation for each listed column with numerical values. With these two values for each of the columns, I calculated the Pearson Coefficient for the percentage of zero-car households, the percentage of two or more cars households, and the total number of high-wage workers concerning the national walkability index for each of the Census regions. 
 I calculated the Pearson Coefficient by finding the sum of the total value of the target column minus the average value, then multiplying this by the total value of the walkability index minus the average value. I divided this value by the column’s standard deviation multiplied by the walkability index’s standard deviation. 
 
 The Results
 As a result of my query, I found the Pearson Coefficient for the percentage of zero-car households and the national walkability index to be 0.3228, the Pearson Coefficient for two cars or more households to the national walkability index to be 0.3772, and the Pearson Coefficient for total high-wage workers to national walkability index to be 0.0007. 
 The Pearson Coefficient ranges from -1 to +1, where +1 indicates a perfect positive linear relationship, -1 represents a perfect negative linear relationship, and 0 indicates no linear relationship. 
-According to this equation, there is a strong positive correlation between the percentage of zero-car households and walkability, a strong negative correlation between the percentage of two car or more households, and no correlation between high-income workers and walkability. 
+According to this equation, there is a strong positive correlation between the percentage of zero-car households and walkability, a strong negative correlation between the percentage of two-car or more households, and no correlation between high-income workers and walkability. 
 
+This query calls the name of the Census area and the values for the columns representing the percentage of households with zero cars, the percentage of households with two cars or more, the total number of high-wage workers, and the national walkability index for the area. 
+![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/2eb20d83-91f1-4529-963a-e1cbc47dad4c)
+
+This query calls the average values for each of the listed columns. 
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/af449647-c5a0-4c36-85e5-ac8a0241f3d5)
 
+This query is used to derive the standard deviation for each of the columns. 
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/34a524a8-56bb-4e39-9946-4845947803f6)
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/24cb07ed-036f-4dc2-b96e-ea87163dddfd)
 
+This query is used to declare the values for the averages and standard deviations for the listed columns. 
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/13855b7c-f8de-4b7f-81b7-dc5fede66140)
 
 ![image](https://github.com/jasghb11/carsandwalkability/assets/141364823/4c3e178f-6023-43b8-99fa-82d215fe6c96)
